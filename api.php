@@ -12,7 +12,8 @@ if (!empty($_GET['disease'])) {
     foreach ($data['diseases'] as $d) {
         if (mb_strtolower($d['n']) === $q) {
             $refs = array_intersect_key($data['refs'], array_flip($d['r']));
-            echo json_encode(['disease' => $d, 'refs' => $refs], JSON_UNESCAPED_UNICODE);
+            $cn = array_intersect_key($data['cn'] ?? [], array_flip($d['s']));
+            echo json_encode(['disease' => $d, 'refs' => $refs, 'cn' => $cn], JSON_UNESCAPED_UNICODE);
             exit;
         }
     }

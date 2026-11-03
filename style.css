@@ -25,7 +25,7 @@ svg#net{position:fixed;inset:0;width:100%;height:100%}
 .node text{font-size:11.5px;fill:#cdd5ee;transition:fill .2s,opacity .2s;pointer-events:none}
 .node:hover text{fill:#fff}
 .dis .dot{fill:var(--dis);filter:url(#glowT)}.dis:hover .dot{r:9}
-.mam .dot{fill:var(--mam);filter:url(#glowA)}.mam text{font-style:italic}.mam:hover .dot{r:12}
+.mam .dot{fill:var(--mam);filter:url(#glowA)}.mam text{font-style:italic}.mam text .cn{font-style:normal;font-size:10.5px;fill:var(--mute)}.mam:hover text .cn,.mam.sel text .cn{fill:#e8ecf8}.mam:hover .dot{r:12}
 .mam.sel .dot{r:13;stroke:#fff;stroke-width:2}
 .ref .dot{fill:var(--ref);filter:url(#glowV)}.ref:hover .dot{r:10}.ref.sel .dot{r:11;stroke:#fff;stroke-width:2}
 .ref text{font-size:12px}
